@@ -21,7 +21,7 @@ export default function CameraPage() {
       setStream(mediaStream);
       setIsCameraActive(true);
 
-      const socket = new WebSocket("ws://localhost:8000/ws");
+      const socket = new WebSocket("wss://zinklorin-bbackend.hf.space/ws");
       setWs(socket);
 
       socket.onmessage = (event) => {
