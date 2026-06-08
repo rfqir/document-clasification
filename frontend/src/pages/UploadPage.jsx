@@ -29,7 +29,7 @@ export default function UploadPage() {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("http://localhost:8000/detect", formData, {
+      const res = await axios.post("https://zinklorin-bbackend.hf.space/detect", formData, {
         timeout: 30000,
       });
       setUploadResult("data:image/jpeg;base64," + res.data.image);
